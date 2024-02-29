@@ -2,54 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbucks Landing Page</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Tea House</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <section>
-        <div class="circle"></div>
-        <header>
-            <a href="#" class="logo"><img src="logo.png"></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">What's New</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </header>
+
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/tea.jpg" alt="">
+        </a>
+
+        <nav class="navbar">
+            <div id="close" class="fas fa-times"></div>
+
+            <a href="#" class="nav_item">Home</a>
+            <a href="#" class="nav_item">About</a>
+            <a href="#" class="nav_item">Menu</a>
+            <a href="#" class="nav_item">Contact</a>
+
+        </nav>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home">
+
         <div class="content">
-            <div class="textBox">
-                <h2>It's not just Coffee <br> It's <span> Starbucks</span> </h2>
-                <p>Welcome to the world of Starbucks Coffee,
-                     where every sip is an invitation to explore new flavors and experiences. 
-                     Our journey began with a single store, and now we're proud to serve our 
-                     signature blends to coffee enthusiasts around the globe.</p>
-                    <a href="#">Learn More</a>
-                    </div>
-                    <div class="imgBox">
-                        <img src="img1.png" class="Starbucks"/>
-                    </div>
-            </div>
+            <h1 class="title"><span>Hot</span> and <span>Fresh </span> Tea </h1>
+            <p class="description">Get up! Get Tea !</p>
+            <a href="#" class="btn">Get Started</a> 
         </div>
-       <ul class="thumb">
-        <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"/></li>
-        <li><img src="thumb2.png"onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"/></li>
-        <li><img src="thumb3.png"onclick="imgSlider('img3.png');changeCircleColor('#d753b1')"/></li>
-       </ul>
-       <ul class="sci">
-        <li> <a href="#"><img src="facebook.png" </a></li>
-        <li> <a href="#"><img src="twitter.png" </a></li>
-        <li> <a href="#"><img src="instagram.png" </a></li>
-       </ul>
+
+        <div class="image">
+            <img src="images/tea1.jpg" alt="" data-speed="-3" class="move">
+        </div>
+
     </section>
-    <script type="text/javascript">
-        function imgSlider(anything){
-            document.querySelector('.Starbucks').src = anything;
-        }
-        function changeCircleColor(color){
-            const circle =document.querySelector('.circle');
-            circle.style.background = color ;
-        }
-    </script>
+
+
+    <!-- home section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- GSAP CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <!-- custom js file -->
+    <script src="script.js"></script>
 </body>
 </html>
